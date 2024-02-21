@@ -1,0 +1,69 @@
+Provide a platform where teachers may schedule and upload resources such as videos, presentations, flowcharts, and notes. For greater openness, teachers should be able to prepare, arrange, and display the curriculum for the following weeks.  
+
+Find and use apps that let various users—teachers, parents, and kids, for example—make comments, tag relevant persons and subjects, and post questions. 
+
+
+-Class
+--subject 
+---daily schedule 
+---- notes, video, animation, ppt etc (study material)
+------comments and replies (by anyone )
+
+	
+required apps: courses and users 
+
+class models: 
+- courses: class, subject, lesson, comments
+- users: custom user model 
+
+USERS: teachers, student, parents 
+
+
+users model:  
+- name (one to one with django user model)
+- bio
+- profile pic
+- user_type 
+** different user types will have different accessibility
+
+
+class model: 
+- name of class (1,2,etc) (id)
+- description 
+
+subject model: 					
+- subject_id (id)
+- subject name 			
+- class (foreign key)	
+- image 		
+- description 
+
+lesson model: 
+- lesson_id (id)
+- standard (foreign key)
+- created by (user - foreign key)
+- created at
+- subject (foreign key)
+- lesson_name 
+- position (chapter no.)
+- video
+- ppt
+- notes
+-quiz
+
+Comment model:
+- lesson name (foreign key)
+- comm_name 
+- author (user -foreign key)
+- body 
+- date_added (datetime)
+
+
+reply model:
+- comment_name (foreign key)
+- reply_body 
+- author (user -foreign key)
+- date_added (datetime)
+
+ 
+
