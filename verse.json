@@ -1,4 +1,3 @@
-
 {
     "builds": [{
         "src": "teaching_blog/wsgi.py",
@@ -9,11 +8,6 @@
         {
             "src": "/(.*)",
             "dest": "teaching_blog/wsgi.py"
-            {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-}
         }
     ]
 }
